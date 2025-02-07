@@ -1,4 +1,4 @@
-package es.santander.ascender;
+package es.santander.ascender.ejerc001;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
