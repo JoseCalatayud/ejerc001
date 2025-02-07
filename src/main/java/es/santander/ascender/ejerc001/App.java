@@ -6,21 +6,19 @@ package es.santander.ascender.ejerc001;
 public class App {
     public static void main(String[] args) {
         
-        var counter = 0;
-        //outer:
-        for (var i = 0; i < 3; i++) {
-            middle:
-            for (var j = 0; j < 3; j++) {
-               //inner:
-                for (var k = 0; k < 3; k++) {
-                    if (k - j > 0) {
-                        continue middle;
-                    }
-                    counter++;
-                }
-            }
-        }
-        System.out.println(counter);
-
+        A a = new A();
+        B b = new B();
+        A a1 = new B();
+        A a2 = new C();
+        a.mA();
+        b.mA();
+        a.mB();
+        a1.mA();
+        a1.mB();
+        a2.mB();
+        System.out.println(a.numero);
+        System.out.println(a1.numero);
+        System.out.println(a2.numero);
+        
     }
 }
