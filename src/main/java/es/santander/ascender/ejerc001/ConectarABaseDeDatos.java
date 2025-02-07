@@ -19,12 +19,12 @@ public class ConectarABaseDeDatos {
                 "jdbc:postgresql://localhost:5432/postgres",
                 username,
                 password)) {
-            try (Statement stmt = con.createStatement(); ResultSet rs = stmt.executeQuery("SELECT * FROM dato order by id");) {
+            try (Statement stmt = con.createStatement();
+                    ResultSet rs = stmt.executeQuery("SELECT * FROM dato order by id");) { //El resultSet es un conjunto de resultados
                 while (rs.next()) {
-                    // int x = rs.getInt("a");
-                    // String s = rs.getString("b");
-                    // float f = rs.getFloat("c");
-                    System.out.println(rs.getString("nombre")+ " "+ rs.getInt("id"));
+                    int id = rs.getInt("id");
+                    String nombre = rs.getString("nombre");
+                    System.out.println(id + " " + nombre);
                 }
             }
         } catch (SQLException e) {
